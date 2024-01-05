@@ -1,0 +1,54 @@
+<nav>
+  <ul>
+    <div id="nav_left">
+      <a href="#">
+        <li id="logo_name">Brook DriveTest</li>
+      </a>
+    </div>
+    <div id="nav_right">
+       
+      <a href="/">
+        <li>dashboard</li>
+      </a>
+      <% if(!loggedIn && !userType) { %>
+      <a class="login_link" href="/login">
+        <li>Login</li>
+      </a>
+      <%}%>
+      <% if(loggedIn && userType=="Driver") { %>
+      <a href="/g2_page">
+        <li>G2_page</li>
+      </a>
+      <a href="/g_page">
+        <li>G_page</li>
+      </a>
+      <a href="/auth/logout">
+        <li>LogOut</li>
+      </a>
+      
+      <% }%>
+      <% if(loggedIn && userType=="Admin") { %>
+      <a href="/user/appointment">
+        <li>appointment</li>
+      </a>
+      <a href="/auth/logout">
+        <li>LogOut</li>
+      </a>
+      <% }%>
+   
+      <% if(loggedIn && userType=="Examiner") { %>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;     
+        <a href="/auth/logout">
+          <li>LogOut</li>
+        </a>
+        <% }%>
+
+
+    </div>
+    </div>
+      
+  </ul>
+</nav>

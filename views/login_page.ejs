@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/head.ejs') -%>
+  <body>
+    <%- include('layouts/navigation.ejs') -%>
+
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="wrapper">
+      <form class="container login-container" action="newuser/store" method="post">
+        <div class="container login-container">
+          <div class="row">
+            <div class="col-md-6 login-form-1">
+              <h3>Sign up</h3>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="username *"
+                  name="userName"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="Your Password *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="confirm_password"
+                  placeholder="confirm Password *"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <select name="user_type" class="form-control" id="cars">
+                  <option value="Driver">Driver</option>
+                  <option value="Examiner">Examiner</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login" />
+              </div>
+              <div class="form-group">
+                <a href="#" class="btnForgetPwd">Forget Password?</a>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </form>
+      <form action="login/loginuser/getdata" method="post" class="container login-container" >
+        <div class="container login-container">
+          <div class="row">
+            <div class="col-md-6 login-form-1">
+              <h3>Login User</h3>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="username"
+                  placeholder="username *"
+                  value=""
+                />
+              </div>
+              <br>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="Your Password *"
+                  value=""
+                />
+              </div>
+              <br>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login" />
+              </div>
+              <div class="form-group">
+                <a href="#" class="btnForgetPwd">Forget Password?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      
+    </div>
+
+
+
+    <div id="error_display">
+
+      <% if(errors != null && errors.length > 0){ %>
+        <ul class="list-group"></ul>
+        <% for (var i = 0; i < errors.length; i++) { %>
+        <li class="list-group-item list-group-item-danger"><%=
+        errors[i] %></li>
+
+        <% } %>
+        </ul>
+        
+        <% } %>
+
+
+    </div>
+
+  </body>
+</html>

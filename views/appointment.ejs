@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/head.ejs') -%>
+  <body>
+    <%- include('layouts/navigation.ejs') -%>
+    <main class="dashboard_heading_appointment">
+      <h1>BOOK AN APPOINTMENT</h1>
+
+      <form
+        class="appointment_form"
+        action="/appointment/booking/store"
+        method="post"
+        id="appointment_form"
+      >
+        <p>SELECT APPOINTMENT TIME FOR USERS</p>
+        <label for="date">SELECT DATE: </label>
+        <input name="date" min="2023-04-01" max="2023-12-31"  type="date" />
+        <br />
+        <label for="appointment_time">select time for appointments</label>
+      <br>
+        <input type="checkbox" id="time" name="time" value="8:00">
+        <label for="time"> 8:00</label> 
+        <input type="checkbox" id="time" name="time"value="8:30">
+        <label for="time"> 8:30</label> 
+        <input type="checkbox" id="time" name="time" value="9:00">
+        <label for="time"> 9:00</label> 
+        <input type="checkbox" id="time" name="time" value="9:30">
+        <label for="time"> 9:30</label> 
+        <input type="checkbox" id="time" name="time"value="10:00">
+        <label for="time"> 10:00</label> 
+        <input type="checkbox" id="time" name="time"value="10:30">
+        <label for="time"> 10:30</label> 
+        <input type="checkbox" id="time" name="time"value="11:00">
+        <label for="time"> 11:00</label> 
+        <input type="checkbox" id="time" name="time"value="11:30">
+        <label for="time"> 11:30</label> 
+        <br> 
+        <input type="checkbox" id="time" name="time"value="12:00">
+        <label for="time"> 12:00</label> 
+        <input type="checkbox" id="time" name="time"value="12:30">
+        <label for="time"> 12:30</label> 
+        <input type="checkbox" id="time" name="time"value="01:00">
+        <label for="time"> 01:00</label> 
+        <input type="checkbox" id="time" name="time"value="01:30">
+        <label for="time"> 01:30</label> 
+        <input type="checkbox" id="time" name="time"value="02:00">
+        <label for="time"> 02:00</label> 
+        <input type="checkbox" id="time" name="time"value="02:30">
+        <label for="time"> 02:30</label> 
+        <input type="checkbox" id="time" name="time"value="03:00">
+        <label for="time"> 03:00</label> 
+        <input type="checkbox" id="time" name="time"value="03:30">
+        <label for="time"> 03:30</label> 
+        <input type="checkbox" id="time" name="time"value="04:00">
+        <label for="time"> 04:00</label> 
+        
+        <br><br>
+        <input type="submit"  class="appointment_btn"  value="SET DATE/TIME FOR APPOINTMENT" >
+<br><br>
+<div id="error_display">
+
+  <% if(errors != null && errors.length > 0){ %>
+    <ul class="list-group"></ul>
+    <% for (var i = 0; i < errors.length; i++) { %>
+      <li class="list-group-item list-group-item-danger"><%=
+        errors[i] %></li>
+        <% } %>
+      </ul>
+      <% } %>
+
+    </div>
+      
+      
+         
+      </form>
+    </main>
+  </body>
+</html>

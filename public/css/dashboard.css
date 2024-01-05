@@ -1,0 +1,144 @@
+* {
+  margin: 10px auto;
+}
+body {
+  background-color: rgb(30, 29, 29);
+  color: white;
+}
+#logo_name {
+  font-size: 30px;
+
+  display: inline-block;
+}
+ul {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30%;
+}
+ul a {
+    color: rgb(255, 255, 255);
+}
+#navigation_bar {
+   
+  color: white;
+
+  text-decoration: none;
+}
+#nav_right {
+  display: flex;
+ gap: 20%;
+  }
+ .login_link{
+  margin-left: 50%;
+ } 
+
+.dashboard_heading{
+
+    margin-top: 7%;
+    margin-left: 40%;
+    font-size: 60px;
+
+}
+#head{
+  text-align: center;
+   
+  text-decoration-line: underline;
+ 
+}
+
+.dashboard_subheading{
+
+    margin-top: 1%;
+    margin-left: 43%;
+font-size: large;
+}
+
+a {
+  font-size: larger;
+  color: aliceblue;
+  text-decoration: none;
+  
+}
+ 
+.btn-primary{
+    width: 100%;
+}
+.login-container{
+    margin-top: 7%;
+    width: 100%;
+}
+ .col-form-label{
+  /* display: block; */
+  width: 100%;
+ }
+ #head_book{
+  text-align: center;
+  /* margin-left: 100px; */
+  text-decoration: wavy underline;
+ }
+  
+ .wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ }
+
+
+
+ /* g2 page css */
+
+ #g2_booking_heading{
+  margin-top: 10%;
+  margin-left: 25%;
+  padding-bottom: 70px;
+  
+ }
+
+ #g2_booking_heading_link{
+  margin-left: 45%;
+  background-color: rgb(31, 113, 4);
+  padding: 1%;
+  border-radius: 5%;
+  font-weight: 700;
+
+    
+ }
+ #g2_booking_heading_link:hover{
+  color: white;  
+ }
+
+
+
+ /* appontment css */
+.dashboard_heading_appointment{
+ 
+ text-align: center;
+ padding:100px ;
+  background-color: rgb(92, 92, 92);
+  color: white;
+  
+
+}
+ #appointment_form> label{
+ margin-right: 20px;
+ }
+ 
+ .appointment_btn{
+  
+  /* margin-left: 20%; */
+  color: rgb(0, 0, 0);
+  background-color: rgb(73, 74, 72);
+  padding: 1%;
+  border-radius: 5%;
+  font-weight: 700;
+
+    
+}
+.appointment_btn:hover{
+  color: white;
+}
+
+#error_display{
+ margin:0 25%;
+
+
+}
